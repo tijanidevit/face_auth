@@ -1,0 +1,104 @@
+@import url("color-overrides.css");
+@import "_materialize-colors";
+@import "_mixins-lib";
+@import "_mixins";
+@import "_variables";
+// @import "_functions";
+// @import url("forms");
+
+//===========================================
+#banner {
+  width: 100%;	
+	height: initial;
+	min-height: 500px;
+	// max-height: 900px;
+	position: relative;
+  background-color: $bg-color;
+  color: #fff;
+	// padding: 10rem 0 6rem;
+	padding: 0;
+	padding-top: 4rem;
+	// z-index: -1;
+	
+	.headline {
+		font-size: 3.5rem;
+		font-weight: 600;
+		color: $primary-text;
+		@media all and (max-width: 700px){ font-size: 3rem; }
+		@media all and (max-width: 550px){ font-size: 2.5rem; }
+		@media all and (max-width: 360px){ font-size: 2.2rem; }
+	}
+	.subheadline {
+		font-size: 2rem;
+		font-weight: 400;
+		color: $teal;
+		color: $secondary-text;
+
+	}
+	.bounds {
+		// padding: 6rem auto;
+		padding-bottom: 6rem;
+		padding-top: 2rem;
+		margin-bottom: -4rem;
+	}
+	.content-wrap {
+		z-index: 100;
+		margin-bottom: 4rem;
+	}
+	.banner-graphic {
+		height: initial;
+		width: initial;
+		max-height: 240px;
+		max-width: 360px;
+	}
+	.btn {
+		&.call-to-action {
+			font-size: 1.5rem;
+			height: 4rem;
+			line-height: 4rem;
+			padding: 0 2rem;
+			font-weight: 600;
+		}
+		&.under-headline {
+			margin-top: 4rem;
+		}
+	}
+	&.has-money-lock-gif { background-color: #FFE6C1; }
+	&.has-maintenance-gif { 
+		background-color: #fff;
+	}
+
+	&.light-bg {
+		color: #111;
+		border-color: #111;
+
+		.btn {
+			// background-color: $blue;
+			// background-color: $teal;
+			// background-color: $yellow-orange;
+			background-color: $teal;
+			border-color: $teal;
+		}
+	}
+
+// Gif-specific Styling
+	#maintenance-gif {
+		max-height: 300px;
+	}
+
+
+
+
+  // &.carousel {
+  //   .carousel-item {
+	// 		height: inherit;
+	// 		height: 100%;
+	// 		padding: 6rem 0;
+
+  //     &#carousel-panel-1 { background-color: $blue; }
+  //     &#carousel-panel-2 { background-color: $yellow-orange; }
+  //     &#carousel-panel-3 { background-color: $teal; }
+  //     &#carousel-panel-4 { background-color: $purple; }
+  //   }
+  // }
+}

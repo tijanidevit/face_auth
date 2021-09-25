@@ -1,0 +1,111 @@
+
+@import "_materialize-colors";
+
+$bg-color: #2980b9;
+$bg-dark: $blue-grey-d3;
+$bg-dark: #34495e;
+$bg-dark: #2c3e50;
+
+// FLAT COLORS =====================
+	
+	$red: #e74c3c;
+	$red-d: #c0392b;
+
+	$orange: #e67e22;
+	$orange-d: #d35400;
+
+	$yellow: #f1c40f;
+	$yellow-orange: #f39c12;
+
+	$green: #2ecc71;
+	$green-d: #27ae60;
+
+	$teal: #1abc9c;
+	$teal-d: #16a085;
+
+	$blue: #3498db;
+	$blue-d: #2980b9;
+
+	$darkblue: #34495e;
+	$darkblue-d: #2c3e50;
+	$darkblue-vd: #233342;
+
+	$purple: #9b59b6;
+	$purple-d: #8e44ad;
+
+	$mono-white: #ecf0f1;
+	$mono-light: #bdc3c7;
+	$mono: #95a5a6;
+	$mono-dark: #7f8c8d;
+	$mono-d2: #505e5f;
+
+// OPTIMAL READABILITY (according to Google Material) ==============================
+
+	// Black
+	$black-text-primary:   rgba(0,0,0,0.87);
+	$black-text-secondary: rgba(0,0,0,0.87);
+	$black-text-disabled:  rgba(0,0,0,0.87);
+	$black-divider:        rgba(0,0,0,0.87);
+	$black-icon-active:    rgba(0,0,0,0.54);
+	$black-icon-inactive:  rgba(0,0,0,0.38);
+
+	// White
+	$white-text-primary:   rgba(255,255,255,1);
+	$white-text-secondary: rgba(255,255,255,0.7);
+	$white-text-disabled:  rgba(255,255,255,1);
+	$white-divider:        rgba(255,255,255,1);
+	$white-icon-active:    rgba(255,255,255,1);
+	$white-icon-inactive:  rgba(255,255,255,0.5);
+
+
+// CUSTOM COLOR VARIABLES =========================
+
+	$faded-white: rgba(255,255,255,0.9);
+	$pure-white: #ffffff;
+
+	$faded-black: rgba(0,0,0,0.9);
+	$pure-black: #000000;
+
+	$darken-base: rgba(0,0,0,0.5);
+	$darken-81-24: rgba(81,81,81,0.24);
+
+// DIMENSIONS ========================
+
+	$max-width: 1200px;
+	$min-width: 300px;
+
+
+// color: $red;
+// color: $red-d;
+// color: $orange;
+// color: $orange-d;
+// color: $yellow;
+// color: $yellow-orange;
+// color: $green;
+// color: $green-d;
+// color: $teal;
+// color: $teal-d;
+// color: $blue;
+// color: $blue-d;
+// color: $darkblue;
+// color: $darkblue-d;
+// color: $darkblue-vd;
+// color: $purple;
+// color: $purple-d;
+// color: $mono-white;
+// color: $mono-light;
+// color: $mono;
+// color: $mono-dark;
+
+// SELECTED COLORS ================================================
+	
+	$primary-text: #242424;
+	$secondary-text: #818181;
+	$disabled-text: #bbbbbb;
+
+	$link-text: #29B6F6;
+	
+	$color-mono: $mono-dark;
+	$c-primary: $teal;
+	$bg-dark: $darkblue-d;
+	$bg-d2: $darkblue-vd;

@@ -1,0 +1,375 @@
+@import url("color-overrides.css");
+/*--------------------------------
+
+	Media Queries
+
+	used for outputting content either between media query tags
+
+	example: basic usage
+
+	.element {
+		width: 50%;
+
+		@include mq('tablet-small') {
+			width: 20%;
+		}
+	}
+
+	example: using max-width
+
+	.element {
+		width: 50%;
+
+		@include mq('tablet-small', 'max') {
+			width: 20%;
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Margin / Padding Quick Resets
+
+	example: top & bottom margin set to $spacing-unit
+	.element {
+		@include push--ends;
+	}
+
+	example: left & right padding set to $spacing-unit--small
+	.element {
+		@include soft--sides($spacing-unit--small);
+	}
+
+*/
+/*--------------------------------
+
+	Helper mixins
+
+*/
+/*--------------------------------
+
+	Form input placeholder text
+
+	example:
+
+	input,
+	textarea {
+		@include input-placeholder {
+			color: $grey;
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Retina images
+
+	example:
+
+	.element {
+		@include retina {
+			background-image: url(../img/background@2x.png);
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Content margins
+
+	fore removing first/last child margins
+
+	example: default
+	.element {
+		@include content-margins;
+	}
+
+	output:
+	.element > *:first-child {
+		margin-top: 0;
+	}
+	.element > *:last-child {
+		margin-bottom: 0;
+	}
+
+	example: empty selector
+	.element {
+		@include content-margins('false');
+	}
+
+	output:
+	.element:first-child {
+		margin-top: 0;
+	}
+	.element:last-child {
+		margin-bottom: 0;
+	}
+
+*/
+/*--------------------------------
+
+	CSS Triangle
+
+	used for creating CSS only triangles
+
+	example:
+	.element {
+
+		&::before {
+			@include css-triangle(blue, down);
+		}
+	}
+
+*/
+/*--------------------------------
+
+	Hide text
+
+	example:
+
+	.element {
+		@include hide-text;
+	}
+
+*/
+/*--------------------------------
+
+	Responsive ratio
+
+	Used for creating scalable elements that maintain the same ratio
+
+	example:
+	.element {
+		@include responsive-ratio(400, 300);
+	}
+
+*/
+/*--------------------------------
+
+	Typography
+
+	Text image replacement, with responsive ratio
+
+	HTML:
+
+	<h1 class="element">
+		<span>Text to replace</span>
+	</h1>
+
+	example:
+	.element {
+		@include typography(200, 50, 'hello-world');
+	}
+
+
+*/
+/*--------------------------------
+
+	Icon
+
+	For using fontastic icons in pseudo elements
+
+*/
+/*--------------------------------
+
+	Colours
+
+	background, colour, etc. match up with colour map in _variables.scss
+
+	modify to suit per project
+
+*/
+/*--------------------------------
+
+	Misc
+
+*/
+/*--------------------------------
+
+	Fluid Property
+
+	http://www.adrenalinmedia.com.au/the-agency/insights/this-changes-everything-css-fluid-properties.aspx
+
+	HTML:
+
+	<h1 class="element">
+		<span>Text to replace</span>
+	</h1>
+
+	example:
+	h1 {
+		@include fp(font-size, 50, 100); // 50px at 320, 100px at 1920;
+	}
+
+	output:
+	h1 {
+		font-size: calc(3.125vw + 40px); //This is the magic!
+	}
+
+	@media (max-width:320px){ //Clips the start to the min value
+		font-size:50px;
+	}
+
+	@media (min-width:1920px){ //Clips the end to the max value
+		font-size:100px;
+	}
+
+
+*/
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav {
+  height: 64px;
+  line-height: 64px;
+  box-shadow: none;
+  font-weight: 400;
+  color: #242424;
+  padding: 0 3rem;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+header nav .nav-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+header nav .nav-wrapper ul {
+  display: inline-block;
+  margin: auto;
+  margin-left: 1rem;
+}
+
+header nav .nav-wrapper ul li,
+header nav .nav-wrapper a i {
+  height: inherit;
+  line-height: inherit;
+}
+
+header nav .nav-wrapper a {
+  font-size: 1.1rem;
+  transition: color 400ms;
+  color: inherit;
+  line-height: inherit;
+}
+
+header nav .nav-wrapper a:hover {
+  background-color: initial;
+  border-color: #000000;
+  color: #000000;
+}
+
+header nav .nav-wrapper a.btn {
+  font-size: 1rem;
+}
+
+header nav .nav-wrapper a.site-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  float: left;
+}
+
+header nav .nav-wrapper a#navbar-trigger {
+  font-size: 2.4rem;
+  margin: 0;
+  display: none;
+  margin-right: 1rem;
+}
+
+header nav .nav-wrapper i {
+  font-size: inherit;
+}
+
+@media all and (max-width: 850px) {
+  header nav .nav-wrapper ul.nav-links-wrap {
+    display: none;
+  }
+  header nav .nav-wrapper a#navbar-trigger {
+    float: left;
+    display: inline-block;
+  }
+}
+
+@media all and (max-width: 500px) {
+  header nav .nav-wrapper ul.login-links {
+    display: none;
+  }
+  header nav .nav-wrapper a#navbar-trigger {
+    float: right;
+    margin: 0;
+  }
+}
+
+header nav .nav-wrapper ul.side-nav li, header nav .nav-wrapper ul.side-nav a i {
+  height: 48px;
+  line-height: 48px;
+}
+
+header nav .nav-wrapper ul.side-nav a {
+  color: #333;
+  line-height: inherit;
+}
+
+header nav .nav-wrapper ul.side-nav a:hover {
+  background-color: transparent;
+  color: #000000;
+}
+
+header nav .nav-wrapper ul.side-nav a.btn {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+header nav .nav-wrapper ul.side-nav a.outline {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+header nav .nav-wrapper ul.side-nav a.filled {
+  background-color: #3498db;
+  color: #fff;
+}
+
+header nav .nav-wrapper ul.dropdown-content {
+  z-index: 1001;
+}
+
+header nav .btn {
+  padding: 0 1.3rem;
+}
+
+header nav .btn.outline {
+  background-color: transparent;
+  box-shadow: none;
+  line-height: 32px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 2px solid rgba(0, 0, 0, 0.9);
+  border-color: inherit;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+header nav .btn.outline:hover {
+  border-color: #000000;
+  color: #000000;
+}
+
+header nav .btn.filled {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 400ms;
+  color: #ffffff;
+  box-shadow: none;
+  border-radius: 4px;
+  line-height: 36px;
+}
+
+header nav .btn.filled:hover {
+  background-color: rgba(0, 0, 0, 0.81);
+  color: #ffffff;
+}

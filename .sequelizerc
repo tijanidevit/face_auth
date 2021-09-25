@@ -1,0 +1,7 @@
+var path = require('path');
+
+module.exports = {
+  'config': path.resolve('C:/Users/XPAT/Documents/flaskapp/face_auth/mypass', 'config/config.json'),
+  'migrations-path': path.resolve('C:/Users/XPAT/Documents/flaskapp/face_auth/mypass', 'migrations'),
+  'models-path': path.resolve('C:/Users/XPAT/Documents/flaskapp/face_auth/mypass', 'models')
+}
